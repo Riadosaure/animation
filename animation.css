@@ -1,0 +1,401 @@
+
+p
+{
+    text-align: center;
+    font-family: Comic Sans MS, sans-serif;
+    font-size: 1.8em;
+    color: teal;
+}
+
+body
+{
+    background-color: powderblue;
+}
+
+/*====================  Exercice du menu ====================*/
+.container1
+{
+    width: 170px;
+    height: 63px;
+    background-color: rgba(47, 112, 90, 0.658);
+    margin: 30px auto;
+    border-radius: 30px;
+    text-align: center;
+    line-height: 63px;
+    font-size: 1.8em;
+    color: powderblue;
+    font-weight: bold;
+    transition-property: height;
+    transition-duration: 2s;
+    transition-delay: 0.3s;
+    transition-timing-function: ease-in-out;
+}
+
+.container1:hover
+{
+    height: 315px;
+}
+
+/*====================  Exercice du carré tournant ====================*/
+.container2
+{
+    width: 500px;
+    height: 500px;
+    border: 2px dotted rgba(47, 112, 90, 0.658);
+    margin: 30px auto;
+}
+
+.square
+{
+    width: 200px;
+    height: 200px;
+    background-color: blueviolet;
+    margin: 150px auto;
+    animation-name: rotation;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes rotation
+{
+    0%{
+        transform: rotateZ(0);
+    }
+
+    25%{
+        transform: rotateZ(90deg);
+        background-color: navy;
+    }
+
+    50%{
+        transform: rotateZ(180deg);
+        background-color: cyan;
+    }
+
+    75%{
+        transform: rotateZ(270deg);
+        background-color: darkblue;
+    }
+
+    100%{
+        transform: rotateZ(360deg);
+        background-color: darkcyan;
+    }
+
+}
+
+/*====================  Exercice de la balle rebondissante ====================*/
+.container3
+{
+    width: 60px;
+    height: 300px;
+    border: 2px solid sandybrown;
+    margin: 20px auto;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.bola
+{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: darkcyan;
+    animation: rebond;
+    animation-duration: 3s;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+}
+
+@keyframes rebond
+{
+    0%{
+        transform: translate(0px,0px);
+    }
+
+    35%{
+        transform: translate(0px,240px);
+    }
+
+    50%{
+        transform: translate(0px, 80px);
+    }
+
+    75%{
+        transform: translate(0px,240px);
+    }
+
+    90%{
+        transform: translate(0px,140px);
+    }
+
+    95%{
+        transform: translate(0px,240px);
+    }
+
+    97%{
+        transform: translate(0px,190px);
+    }
+
+    98%{
+        transform: translate(0px,240px);
+    }
+
+    99%{
+        transform: translate(0px,220px);
+    }
+
+    100%
+    {
+        transform: translate(0px, 240px);
+    }
+}
+
+/*====================  Exercice du chargement ====================*/
+.container4
+{
+    width: 500px;
+    height: 500px;
+    border: 2px dotted rgba(47, 112, 90, 0.658);
+    margin: 30px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.boule
+{
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    background-color: black;
+    animation-name: clignote;
+    animation-duration: 500ms;
+    animation-iteration-count: infinite;
+}
+
+#rond1
+{
+    animation-delay: 0s;
+}
+
+#rond2
+{
+    animation-delay: 100ms;
+}
+
+#rond3
+{
+    animation-delay: 200ms;
+}
+
+@keyframes clignote
+{
+    0%{
+        background-color: black;
+    }
+
+    50%{
+        background-color: darkcyan;
+    }
+
+    100%{
+        background-color: black;
+    }
+}
+
+/*====================  Exercice du marathon ====================*/
+.container5
+{
+    width: 500px;
+    height: 500px;
+    border: 2px dotted rgba(47, 112, 90, 0.658);
+    margin: 30px auto;
+    position: relative;
+}
+
+.marathonien
+{
+    width: 60px;
+    height: 60px;
+    border: 2px solid lightslategray;
+    position: absolute;
+    animation: course 5s infinite;
+    animation-timing-function: linear;
+    /*animation: rotating 1s infinite;*/
+}
+
+#coureur1
+{
+    background-color: lime;
+    animation-delay: 0s;
+}
+
+#coureur2
+{
+    background-color: magenta;
+    animation-delay: 1s;
+}
+
+#coureur3
+{
+    background-color: orange;
+    animation-delay: 2s;
+}
+
+#coureur4
+{
+    background-color: tomato;
+    animation-delay: 3s;
+}
+
+#coureur5
+{
+    background-color: slateblue;
+    animation-delay: 4s;
+}
+
+@keyframes course
+{
+    0%{
+        transform: translate(0);
+    }
+
+    25%{
+        transform: translate(440px, 0px) rotate(360deg);
+        background-color: chocolate;
+    }
+
+    50%{
+        transform: translate(440px, 440px) rotate(720deg);
+        background-color: snow;
+    }
+
+    75%{
+        transform: translate(0px, 440px) rotate(1080deg);
+        background-color: yellowgreen;
+    }
+
+    100%
+    {
+        transform: translate(0) rotate(1440deg);
+        background-color: blue;
+
+    }
+}
+ /*====================  Exercice du carrousel 3D ====================*/
+
+ .container6
+        {
+            margin: 20px auto 10px;
+            border: 2px solid navy;
+            width: 560px;
+            height: 205px;
+            background-image: url("fontAnimation/terrain.jpg");
+            background-size: cover;
+            background-position: center;
+        }
+
+        .prisme
+        {
+            border: 2px solid rgba(91, 104, 91, 0);
+            width: 30px;
+            height: 30px;
+            perspective: 1000px;
+            animation-name: deplacement;
+            animation-duration: 15s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+
+        }
+
+        .manege
+        {
+            border: 2px dotted rgba(23,24,25,0);
+            width: 1px;
+            height: 1px;
+            position: relative;
+            transform-style: preserve-3d;
+            animation-name: cercle;
+            animation-duration: 5s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+        }
+
+        .box
+        {
+            display: block;
+            position: absolute;
+            border: 2px solid black;
+            background-color: cornflowerblue;
+            width: 20px;
+            height: 20px;   
+        }
+
+        .a {
+            transform: rotateY(0deg) translateZ(20px);
+            background: #ed1c24;
+           }
+        
+        .b {
+            transform: rotateY(90deg) translateZ(20px);
+            background: peru;
+           }
+        
+        .c {
+            transform: rotateY(180deg) translateZ(20px);
+            background: magenta;
+           }
+
+        .d {
+            transform: rotateY(270deg) translateZ(20px);
+            background: lime;
+           }
+
+        @keyframes cercle
+        {
+            0%{
+                transform: rotateY(0);
+            }
+
+            25%{
+                transform: rotateY(90deg) rotateX(90deg);
+            }
+
+            50%{
+                transform: rotateY(180deg) rotateX(180deg);
+            }
+
+            75%{
+                transform: rotateY(270deg) rotateX(270deg);
+            }
+
+            100%{
+                transform: rotateY(360deg) rotateX(360deg);
+            }
+        }
+
+        @keyframes deplacement
+        {
+            0%{
+                transform: translate(0px,0px);
+            }
+
+            25%{
+                transform: translate(528px,0px);
+            }
+
+            50%{
+                transform: translate(528px,173px);
+            }
+
+            75%{
+                transform: translate(0px,173px);
+            }
+
+            100%{
+                transform: translate(0px,0px);
+            }
+        }
